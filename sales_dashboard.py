@@ -16,7 +16,8 @@ df = pd.read_csv("retail sales.csv")
 
 # using the sum() function we get the sum of sales, profit and shipping cost
 
-df.sum()
+#sum = df.sum()
+#sum
 
 # to the nearest round figure
 # sales is 2.3M
