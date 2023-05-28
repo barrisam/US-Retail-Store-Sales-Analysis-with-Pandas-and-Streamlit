@@ -52,29 +52,13 @@ with outer_cols[0]:
     # creating an inner nested col within col 1
      # This inner columns will hold the chart for sales and profit for the four regions and a table with the list of states and their sales and profits
 
-    # using groupby to extract the columns we need from the dataframe
-    plt.style.use("fivethirtyeight")
-    
-    region_sales_profit = df.groupby(by=['Region']).mean()[['Sales', 'Profit']]
-    region_sales_profit = region_sales_profit.reset_index()
-    sales = region_sales_profit['Sales']
-    profit = region_sales_profit['Profit']
-    region = region_sales_profit['Region']
+  
 
-    # creating a stacked bar chart
-    fig = plt.figure(figsize = (9,6))
 
-    plt.bar(region, sales, color = 'purple', label = 'Sales', width = 0.3)
-    plt.bar(region, profit, bottom = sales, color = 'orange', label = 'Profit', width = 0.3)
 
-    plt.xlabel("Region")
-    plt.ylabel("Sales and Profit")
-    plt.title("Average Sales and Profits by Region")
 
-    plt.legend()
-    plt.tight_layout()
 
-    st.pyplot(fig)
+
 
     white_space = st.columns([1]) # create white space between the figures and chart
     # next we create an interactive table with the top 10 states by sales, profit on it. More states can be added if need be
