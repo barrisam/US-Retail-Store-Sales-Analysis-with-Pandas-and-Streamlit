@@ -12,7 +12,7 @@ st.header("US Retail Superstore Sales Analysis")
 
 
 # read in the excel dataset with pandas
-df = pd.read_csv("retail superstore sales.xlsx")
+df = pd.read_csv("retail sales.csv")
 
 # using the sum() function we get the sum of sales, profit and shipping cost
 
