@@ -55,7 +55,7 @@ with outer_cols[0]:
     # using groupby to extract the columns we need from the dataframe
     plt.style.use("fivethirtyeight")
     
-    region_sales_profit = df.groupby['Region']('Sales', 'Profit').mean()
+    region_sales_profit = df.groupby('Region')[('Sales', 'Profit')].mean()
     region_sales_profit = region_sales_profit.reset_index()
     sales = region_sales_profit['Sales']
     profit = region_sales_profit['Profit']
